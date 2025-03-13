@@ -10,7 +10,7 @@ interface Props {
 export default function InteractiveCard({ children }: Props) {
   return (
     <div
-      className="w-64 min-h-fit bg-white shadow-lg rounded-lg p-2 transition-all"
+      className="w-64 h-full min-h-fit bg-white shadow-lg rounded-lg p-2 transition-all"
       onMouseOver={onCardMouseAction}
       onMouseOut={onCardMouseAction}
     >

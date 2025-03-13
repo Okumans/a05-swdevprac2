@@ -8,7 +8,7 @@ interface Props {
 
 export default function Card({ venueName, imgSrc }: Props) {
   return (
-    <div>
+    <div className="h-80">
       <InteractiveCard>
         <div className="relative w-full min-h-52 h-1/2 overflow-hidden rounded-lg">
           <Image
