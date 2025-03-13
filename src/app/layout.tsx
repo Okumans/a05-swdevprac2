@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import TopMenu from "@/components/TopMenu";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import TopMenuItem from "@/components/TopMenuItem";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <TopMenu />
-        {children}
+        <AppRouterCacheProvider>
+          <div className="mt-16">{children}</div>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
